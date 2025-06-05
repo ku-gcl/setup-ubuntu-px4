@@ -63,11 +63,14 @@ git clone git@github.com:ku-gcl/px4_ros_com.git
 # TypeError: canonicalize_version() got an unexpected keyword argument 'strip_trailing_zero'
 pip3 install "setuptools==65.5.0"
 
+# sudo apt update
+# sudo apt install libeigen3-dev
+
 cd ~/ws_px4
 colcon build --symlink-install
 
 # mocap
-sudo apt install -y ros-{$ROS_DISTRO}-vrpn-mocap
+sudo apt install -y ros-$ROS_DISTRO-vrpn-mocap
 # ---------------------------------
 
 
