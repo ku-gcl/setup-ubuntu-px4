@@ -73,6 +73,10 @@ colcon build --symlink-install
 sudo apt install -y ros-$ROS_DISTRO-vrpn-mocap
 # ---------------------------------
 
+# serial
+sudo apt install -y raspi-config
+
+
 
 # bashrc
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
@@ -86,9 +90,14 @@ echo "source ~/ws_px4/install/setup.bash" >> ~/.bashrc
 
 # # Micro XRCE-DDS Agent (/dev/ttyAMA0 or /dev/serial0)
 # sudo MicroXRCEAgent serial --dev /dev/ttyAMA0 -b 921600
+# sudo -S MicroXRCEAgent serial --dev /dev/ttyAMA0 -b 921600
 
 # # Mocap (serverにはMotiveを起動しているPCのIPアドレスを指定)
-# ros2 launch vrpn_mocap client.launch.yaml server:=192.168.1.184 port:=3883
+# ros2 launch vrpn_mocap client.launch.yaml server:=192.168.1.196 port:=3883
+
+# # mocap2PX4
+# ros2 run px4_ros_com mocap_pose_to_px4_pose
+
 
 # # echo
 # ros2 topic list
