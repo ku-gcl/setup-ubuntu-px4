@@ -23,17 +23,16 @@ sudo apt install -y ros-humble-desktop
 sudo apt install -y ros-dev-tools
 source /opt/ros/humble/setup.bash && echo "source /opt/ros/humble/setup.bash" >> .bashrc
 
+# Some Python dependencies must also be installed (using pip or apt):
 pip install --user -U empy==3.3.4 pyros-genmsg setuptools
 
 
 # Setup Micro XRCE-DDS Agent & Client
 git clone -b v2.4.2 https://github.com/eProsima/Micro-XRCE-DDS-Agent.git
-
 # "Failed to checkout tag: '2.12.x'"というエラーが生じるので、修正
 # You should check availability from Github
 # https://github.com/eProsima/Fast-DDS/tree/v2.13.0
 sed -i 's/set(_fastdds_tag 2.12.x)/set(_fastdds_tag 2.13.0)/g' ~/Micro-XRCE-DDS-Agent/CMakeLists.txt
-
 cd Micro-XRCE-DDS-Agent
 mkdir build
 cd build
