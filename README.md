@@ -1,5 +1,5 @@
 # Ubuntu setup script for desktop and Raspberry Pi
-## Info
+## Tested Info
 - OS: Ubuntu 22.04
 
 ## Setup Git
@@ -63,7 +63,7 @@ source 5-raspberrypi-setup.sh
 ```
 
 ## Trouble shooting
-### setuptoolでエラーが起きるとき
+### setuptoolsでエラーが起きるとき
 Ubuntu 22.04 running on Raspberry Pi 4では以下のエラーが生じた。
 
 ```bash
