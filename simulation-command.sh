@@ -11,4 +11,4 @@ MicroXRCEAgent udp4 -p 8888
 
 # Run ROS2
 cd ~/ws_px4
-ros2 run px4_ros_com position_control
+ros2 run px4_ros_com setpoint_control

@@ -21,5 +21,5 @@ ros2 run px4_ros_com mocap_pose_to_px4_pose    ## Mocap-PX4のブリッジノー
 ros2 topic echo /fmu/out/vehicle_odometry      ## PX4からのEKF処理後のデータが来ているか確認
 
 # ros2 run
-ros2 run px4_ros_com position_control
+ros2 run px4_ros_com setpoint_control
 ros2 run px4_ros_com circle_position_control
