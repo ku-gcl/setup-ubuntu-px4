@@ -40,3 +40,19 @@ source ~/.bashrc
 qgroundcontrol
 # ---------------------------------------
 
+
+# /etc/os-releaseからUbuntuバージョンを取得
+source /etc/os-release
+
+if [ "$VERSION_ID" == "22.04" ]; then
+  echo "Ubuntu 22.04 detected. Installing PlotJuggler..."
+
+  # ROS用のPlotJugglerをインストール
+  sudo apt update
+  sudo snap install plotjuggler
+
+  echo "PlotJuggler installed."
+else
+  echo "Plotjuggler only supports Ubuntu 22.04."
+  exit 1
+fi
