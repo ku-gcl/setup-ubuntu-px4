@@ -40,6 +40,17 @@ source ~/.bashrc
 qgroundcontrol
 # ---------------------------------------
 
+# vscode install
+# 1. VS Code の最新 .deb を取得
+cd ~/Downloads
+wget -O code_latest_amd64.deb \
+  "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+# 2. 依存解決しつつインストール
+sudo apt update
+sudo apt install -y ./code_latest_amd64.deb
+# 3. 不要になった .deb ファイルを削除
+rm code_latest_amd64.deb
+
 
 # /etc/os-releaseからUbuntuバージョンを取得
 source /etc/os-release
