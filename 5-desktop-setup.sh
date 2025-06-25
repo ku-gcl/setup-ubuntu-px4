@@ -40,6 +40,11 @@ source ~/.bashrc
 qgroundcontrol
 # ---------------------------------------
 
+# install PX4
+cd ~/
+git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+
+
 # vscode install
 # 1. VS Code の最新 .deb を取得
 cd ~/Downloads
