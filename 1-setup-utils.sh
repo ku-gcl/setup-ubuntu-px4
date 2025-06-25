@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# -----------------
+# Install
+# - net-tools for ifconfig
+# - opessh-server for ssh connection
+# - python3-pip
+# -----------------
+
 # Utils
 sudo apt update
 sudo apt upgrade

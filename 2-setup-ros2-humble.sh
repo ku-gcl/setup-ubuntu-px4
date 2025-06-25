@@ -17,4 +17,5 @@ sudo apt install ros-dev-tools
 source /opt/ros/humble/setup.bash && echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
 # Some Python dependencies must also be installed (using pip or apt):
-pip install --user -U empy==3.3.4 pyros-genmsg setuptools
+pip3 install --user -U empy==3.3.4 pyros-genmsg
+pip3 install "setuptools==65.5.0"

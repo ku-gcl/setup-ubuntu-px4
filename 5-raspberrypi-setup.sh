@@ -1,12 +1,19 @@
 #!/bin/bash
 # PC: Raspberry Pi 4
 # OS: Ubuntu 22.04
+# -----------------
+# Install
+# - vrpn_mocap
+# - raspi-config for serial connection
+# - Add permission to /dev/ttyUSB0
+# - Enable UART
+# - Reboot
+# -----------------
 
 sudo apt update && sudo apt upgrade -y
 
 # mocap
 sudo apt install -y ros-$ROS_DISTRO-vrpn-mocap
-# ---------------------------------
 
 # serial
 sudo apt install -y raspi-config
